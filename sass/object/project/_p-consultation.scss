@@ -1,0 +1,13 @@
+.p-consultation__table{
+  border: 1px solid $border-color;
+  display: inline-block;
+  border-radius: 10px;
+  box-sizing: border-box;
+  width: inherit;
+  max-width: inherit;
+  @include mq(tab){
+    width: rem(400);
+  }
+
+}
+

@@ -1,0 +1,37 @@
+.p-about{
+
+}
+
+.p-about__inner{
+  width: rem(1000);
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.p-about__title{
+  text-align: center;
+}
+
+.p-about__text:not(:first-child){
+  margin-top: rem(16);
+}
+
+.p-about__btn{
+  display: flex;
+  justify-content: center;
+  margin-top: rem(25);
+}
+
+.p-about__wrapper{
+  display: flex;
+  margin-top: rem(25);
+  // align-items: center;
+}
+
+.p-about__img{
+  margin-right: rem(25);
+}
+
+.p-about__img img{
+  border-radius: rem(10);
+}

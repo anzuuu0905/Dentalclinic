@@ -5,10 +5,78 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="format-detection" content="telephone=no">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!-- 自動リンクを無効にする -->
+  <meta name="format-detection" content="telephone=no">
+  <!-- fontawesomを使用する -->
+  <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+  <!-- スライダー -->
+  <!-- <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/> -->
+
   <?php wp_head(); ?>
 </head>
+ 
 <body <?php body_class(); ?>>
   <?php wp_body_open(); ?>
-  <header class="">
-    <p class="p-test">aaaa</p>
+  <header class="l-header p-header
+    <?php if(is_front_page()){
+      echo 'js-top-header';
+    }else{
+      echo 'js-sub-header';}  
+    ?>">
+    <div class="p-header__inner">
+      <h1 class="p-header__title v u-hidden-sp  l-inner">一宮市の「Hiro歯科クリニック」は、一宮駅直結の歯医者さん</h1>
+      <div class="p-header__box  l-inner">
+        <div class="p-header__logo">
+          <a href="/">
+          <!-- Hiro歯科クリニック -->
+            <img class="c-logo" src="<?php echo get_template_directory_uri() ?>/assets/img/common/logo.png"
+            　　　srcset="<?php echo get_template_directory_uri() ?>/assets/img/common/logo.png"
+                alt="Hiro歯科クリニック" loading="lazy">
+          </a>
+        </div>
+        <div class="p-header__telbox p-tel u-hidden-sp">
+          <p class="p-tel__text">ご予約・お問い合わせはお気軽にどうぞ</p>
+          <p class="p-tel__no"><i class="fa fa-phone fa-rotate-90"></i> 999-999-9999</p>
+        </div>
+        <div class="p-header__menubox u-hidden-pc">
+          <div class="p-header__drawer c-hamburger js-hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <div class="p-header__menutext">
+            <span>メニュー</span>
+          </div>
+        </div>
+      </div>
+      <div class="p-header__menu p-drawer-menu js-drawer-menu  l-inner">
+        <nav class="p-drawer-menu__menu">
+          <ul class="p-drawer-menu__items">
+            <li class="p-drawer-menu__item"><a href="#">当院について</a></li>
+            <li class="p-drawer-menu__item"><a href="#">診療案内</a></li>
+            <li class="p-drawer-menu__item"><a href="#">初めての方へ</a></li>
+            <li class="p-drawer-menu__item"><a href="#">よくあるご質問</a></li>
+            <li class="p-drawer-menu__item"><a href="#">アクセス</a></li>
+          </ul>
+        </nav>
+        <div class="p-header__telbox p-tel">
+          <p class="p-tel__text">ご予約・お問い合わせはお気軽にどうぞ</p>
+          <p class="p-tel__no"><i class="fa fa-phone fa-rotate-90"></i> <a href="tel:000-1234-5678">000-1234-5678</a></p>
+        </div>
+
+      </div>
+      <div class="p-header__overlay js-overlay"></div>
+      <div class="p-header__nav p-gnav u-hidden-sp">
+        <nav class="p-gnav__menu">
+          <ul class="p-gnav__items">
+            <li class="p-gnav__item"><a href="#">当院について</a></li>
+            <li class="p-gnav__item"><a href="#">診療案内</a></li>
+            <li class="p-gnav__item"><a href="#">初めての方へ</a></li>
+            <li class="p-gnav__item"><a href="#">よくあるご質問</a></li>
+            <li class="p-gnav__item"><a href="#">アクセス</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
   </header>

@@ -1,0 +1,18 @@
+._p-mv{
+  // background-image: url("./../img/common/mv1.jpg");
+  background-repeat: no-repeat;
+  background-position: 50%;
+  // background-position: center;
+  background-size: cover;
+  color: $background;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  // height: calc(100vh - #{rem(200)});
+  height: rem(420);
+  margin-bottom: rem(40);
+  @include mq('tab'){
+    margin-bottom: rem(70);
+  }
+}

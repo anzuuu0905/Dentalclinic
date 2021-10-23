@@ -1,6 +1,11 @@
 // 色
 $background: #fff; // 背景
+$background2: #fff; // 背景
 $text-color: #333; // テキスト色
+$text-color2: #ff7623; // テキスト色
+$text-color3: #333; // テキスト色
+$border-color:#d2d2d2;
+$burger-color: #ff7623; // テキスト色
 
 // マウスホバー
 $opacity: 0.7; // 透過度
@@ -24,11 +29,11 @@ $breakpoints: (
 	"tab": "screen and (min-width: #{$l-tab})",
 	"pc": "screen and (min-width: #{$l-inner})",
 	"lg": "screen and (min-width: #{$l-pc})",
-
+	"max-tab": "screen and (max-width: #{$l-tab})",
 );
 
 
-
+$z-index-top:1000;
 
 $padding-pc: 25px; // タブレット時の余白
 $padding-sp: 20px; // スマホ時の余白
