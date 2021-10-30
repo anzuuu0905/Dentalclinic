@@ -1,9 +1,15 @@
 .p-about{
-
+  opacity: 0;
+  animation-name: fadeup;
+  animation-duration: 1.5s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+  background: $background2;
+  padding: rem(24) 0;
 }
 
 .p-about__inner{
-  width: rem(1000);
+  width: $l-inner;
   max-width: 100%;
   margin: 0 auto;
 }
@@ -12,8 +18,12 @@
   text-align: center;
 }
 
-.p-about__text:not(:first-child){
-  margin-top: rem(16);
+.p-about__text{
+  text-align: center;
+}
+
+.p-about__feature{
+  margin-top: rem(24);
 }
 
 .p-about__btn{
@@ -24,14 +34,28 @@
 
 .p-about__wrapper{
   display: flex;
+  flex-direction: column;
   margin-top: rem(25);
+  @include mq(tab){
+    flex-direction: initial;
+  }
   // align-items: center;
 }
 
 .p-about__img{
-  margin-right: rem(25);
+  @include mq(tab){
+    margin-right: rem(25);
+    }
 }
 
 .p-about__img img{
+  width: 100%;
   border-radius: rem(10);
+}
+
+.p-about__textbox{
+  margin-top: rem(24);
+  // @include mq(tab){
+  //   margin-top: 0;
+  // }
 }

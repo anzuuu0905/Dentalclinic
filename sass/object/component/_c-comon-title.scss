@@ -1,0 +1,14 @@
+.c-comon-title{
+  width: 100%;
+  background: $text-color2;
+}
+
+.c-comon-title__inner{
+  padding: rem(24) 0;
+}
+
+.c-comon-title__title{
+  font-size: rem(24);
+  color: $background;
+  text-align: center;
+}

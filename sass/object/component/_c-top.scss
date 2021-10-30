@@ -1,0 +1,25 @@
+.c-top{
+  position: fixed;
+  right: rem(20);
+  bottom: rem(20);
+  z-index: $z-index-top;
+  display: none;
+  @include mq(tab) {
+    right: rem(45);
+    bottom: rem(45);
+}
+.c-top__link {
+  display: block;
+  width: rem(50);
+  height: rem(50);
+  padding: rem(12);
+  text-align: center;
+  text-decoration: none;
+  color: $background;
+  border-radius: 50%;
+  background-color: $text-color2;
+  &:hover {
+    opacity: 0.8;
+  }
+}
+}

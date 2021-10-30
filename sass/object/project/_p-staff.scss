@@ -1,0 +1,84 @@
+.p-staff__wrapper{
+  display: flex;
+  flex-direction: column;
+  @include mq(tab){
+    flex-direction: initial;
+  }
+}
+
+.p-staff__box{
+  width: rem(320);
+  max-width: 100%;
+}
+
+.p-staff__name{
+  font-size: rem(24);
+  text-align: center;
+}
+
+.p-staff__messagebox{
+  max-width: 100%;
+  width: 100%;
+  margin-top: rem(24);
+  @include mq(tab){
+    margin-left: rem(40);
+    margin-top: 0;
+    width: calc(68% - #{$padding-pc * 2});
+  }
+}
+
+.p-staff__messagetitle{
+}
+
+.p-staff__subtitle{
+  text-align: center;
+  color: $text-color2;
+}
+
+.p-staff__title{
+  text-align: center;
+}
+.p-staff__message{
+  margin-top: rem(24);
+}
+
+.p-staff__infowrapper{
+  display: flex;
+  margin-top: rem(48);
+  flex-direction: column;
+  @include mq(tab){
+    flex-direction: initial;
+  }
+
+}
+
+.p-staff__infoitem{
+  padding: rem(8);
+  border-bottom: 1px solid $border-color;
+  @include mq(tab){
+    padding: rem(8) rem(24);
+  }
+}
+
+.p-staff_infolist{
+  margin-top: rem(16);
+}
+
+.p-staff__infotitle{
+  text-align: center;
+}
+
+.p-staff__belongbox{
+  width: rem(400);
+  max-width: 100%;
+  margin-top: rem(24);
+  @include mq(tab){
+    margin-left: rem(80);
+    margin-top: 0;
+  }
+}
+
+.p-staff__infobox{
+  width: rem(400);
+  max-width: 100%;
+}

@@ -1,7 +1,8 @@
 
 .c-hamburger{
   z-index:9999;
- }
+  // background: $burger-color;
+}
  
 .c-hamburger span {
   position: relative;
@@ -9,6 +10,7 @@
   height: rem(2);
   width: rem(30);
   background: $burger-color;
+  // background: $background;
   transition: ease .3s;
 }
  

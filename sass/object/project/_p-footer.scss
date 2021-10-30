@@ -1,0 +1,13 @@
+.p-footer{
+  background-color: $border-color;
+}
+.p-footer__inner{
+  padding: rem(8);
+
+}
+
+.p-footer__copyright{
+  display: flex;
+  justify-content: center;
+  
+}

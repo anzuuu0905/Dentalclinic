@@ -1,8 +1,12 @@
-<footer class="">
-<br>
-<br>
-<br>
-<br>
+<footer class="l-footer p-footer">
+  <div class="p-footer__inner l-inner">
+    <div class="p-footer__copyright">
+      <small>&copy; 2021 Hiro Dental Clinic.</small>
+    </div>
+    <div class="c-top">
+      <a href="#" class="c-top__link"><i class="fas fa-arrow-up" aria-hidden="true"></i></a>
+    </div>
+  </div>
 </footer>
 <?php wp_footer(); ?>
 <!-- slickのJavaScript -->

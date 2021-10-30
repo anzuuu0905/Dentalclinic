@@ -155,3 +155,30 @@ function my_excerpt_more( $more ) {
 
 }
 add_filter( 'excerpt_more', 'my_excerpt_more' );
+
+function loginpage_edit() {?>
+
+	<style>	
+	/* ロゴを変更する場合は以下5行分を貼り付けます */
+.login #login h1 a {
+	background : none;
+}
+	/* 背景画像を変更する場合は以下4行分を貼り付けます */
+	.login {
+	background-image: url("<?php echo get_template_directory_uri() ?>/assets/img/common/mv1.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	width: ;100%;
+	height: 66%;
+	}
+
+	#login{
+		position: absolute;
+		top:400px;
+		left:50%
+	}
+
+	</style>
+	<?php }
+	add_action( 'login_enqueue_scripts', 'loginpage_edit' );
+

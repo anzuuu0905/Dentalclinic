@@ -1,16 +1,28 @@
 .p-header{
 }
 
-.p-header__box{
+.p-header__box,
+.p-header__sp
+{
   display: flex;
   justify-content: space-between;
   align-items: center;
+	background: $background;
+}
+
+.p-header__sp.m_fixed {
+	position: fixed;
+	top: 0;
+	z-index: $z-index-top;
 }
 
 .p-header__logo{
   font-size: rem(24);
+	max-width: rem(220);
   width: 100%;
-  max-width: rem(250);
+	@include mq(tab){
+		max-width: rem(250);
+	}
 }
 
 .p-header__title{
@@ -25,7 +37,6 @@
 .p-header__menutext span{
   font-size: rem(10);
   color:$text-color2;
-
 }
 
 
@@ -48,8 +59,6 @@
 .p-header__nav{
   display: flex;
   justify-content:center;
-  // width: 1000px;
-  // width: calc(100% - $padding-sp*2);
 	height: inherit;
 	padding-right: $padding-sp;
 	padding-left: $padding-sp;
@@ -58,4 +67,39 @@
 		padding-left: $padding-pc;
 	}
 
+}
+.p-header__spbox{
+	display: flex;
+	justify-content: center;
+}
+
+.p-header__sptel{
+	display: flex;
+	flex-direction: column;
+	font-size: rem(24);
+	line-height: 1;
+	// border:1px solid black;
+	color:$text-color2;
+	background-color: $background2;
+	padding: 4px 10px;
+}
+
+.p-header__sptel a{
+	font-size: 16px;
+}
+
+.p-header__sptel span{
+	padding-top: rem(4);
+}
+
+.p-header__menubox{
+	margin-left: rem(8);
+	padding-top: rem(4);
+	background-color: $background2;
+
+}
+
+.p-header__sptel span{
+  font-size: rem(10);
+  color:$text-color2;
 }

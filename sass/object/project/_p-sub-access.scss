@@ -1,0 +1,37 @@
+.p-sub-access__map{
+  margin-top: rem(48);
+}
+
+.p-sub-access__box{
+  margin-top: rem(24);
+  width: 100%;
+}
+
+.p-sub-access__item{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  @include mq(tab){
+    flex-direction: initial;
+  }
+}
+
+.p-sub-access__title{
+  width: 100%;
+  max-width: 100%;
+  color:$text-color2;
+  padding: rem(8);
+  @include mq(tab){
+    width: 20%;
+  }
+}
+
+.p-sub-access__text{
+  width: 100%;
+  max-width: 100%;
+  padding-left: rem(32);
+  @include mq(tab){
+    width: 80%;
+    padding: rem(8);
+  }
+}
