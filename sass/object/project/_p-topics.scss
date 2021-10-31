@@ -1,0 +1,21 @@
+.p-topics__item{
+  margin: rem(24) auto 0;
+}
+
+.p-topics__title{
+  text-align: center;
+}
+
+.p-topics{
+  background-color: $background2;
+}
+
+.p-topics__inner{
+  padding: rem(48);
+}
+
+.p-topics__btn{
+  margin-top: rem(24);
+  display: flex;
+  justify-content: center;
+}

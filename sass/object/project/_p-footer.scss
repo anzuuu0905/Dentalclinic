@@ -1,5 +1,7 @@
 .p-footer{
-  background-color: $border-color;
+  // background-color: $border-color;
+  // background-color: $background2;
+  // margin-bottom: rem(80);
 }
 .p-footer__inner{
   padding: rem(8);
@@ -9,5 +11,11 @@
 .p-footer__copyright{
   display: flex;
   justify-content: center;
-  
+  margin-top: rem(24);
+}
+
+.p-footer__logo{
+  margin-top: rem(48);
+  max-width: 80%;
+  width: rem(300);
 }

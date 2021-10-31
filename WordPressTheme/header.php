@@ -26,6 +26,7 @@
     $topics = esc_url(home_url('/topics/'));
     $access = esc_url(home_url('/access/'));
   ?>
+
   <header class="l-header p-header
     <?php if(is_front_page()){
       echo 'js-top-header';

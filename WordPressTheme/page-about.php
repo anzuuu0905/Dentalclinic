@@ -7,6 +7,13 @@
     </div>
   </div>
   <div class="p-sub-about__inner l-inner">
+    <div class="l-breadcrumb">
+      <?php if(function_exists('bcn_display'))
+        {
+            bcn_display();
+        }?>
+    </div>
+
     <div class="p-sub-about__messagebox fadeUpTrigger">
       <p class="p-sub-about__message">一宮市の「Hiro歯科クリニック」は、一宮駅直結の歯医者です。</p>
       <p class="p-sub-about__message">当院では、患者さまと二人三脚で、その方に合った予防処置を行うことで、口から全身の健康を改善していただけるよう努めています。</p>
@@ -16,7 +23,7 @@
       <div class="p-sub-about__featurebox">
         <div class="p-sub-about__feature p-sub-feature">
           <figure class="p-sub-feature__img">
-            <img src="<?php echo get_template_directory_uri() ?>/assets/img/common/feature1.jpg" alt="mv3">
+            <img src="<?php echo get_template_directory_uri() ?>/assets/img/common/feature1.jpg" alt="feature1" loading="lazy">
           </figure>
           <div class="p-sub-feature__body">
             <div class="p-sub-feature__titlebox">
@@ -28,7 +35,7 @@
         </div>
         <div class="p-sub-about__feature p-sub-feature fadeUpTrigger">
           <figure class="p-sub-feature__img">
-            <img src="<?php echo get_template_directory_uri() ?>/assets/img/common/feature2.jpg" alt="mv3">
+            <img src="<?php echo get_template_directory_uri() ?>/assets/img/common/feature2.jpg" alt="feature1" loading="lazy">
           </figure>
           <div class="p-sub-feature__body">
             <div class="p-sub-feature__titlebox">
@@ -40,7 +47,7 @@
         </div>
         <div class="p-sub-about__feature p-sub-feature fadeUpTrigger">
           <figure class="p-sub-feature__img">
-            <img src="<?php echo get_template_directory_uri() ?>/assets/img/common/feature3.jpg" alt="mv3">
+            <img src="<?php echo get_template_directory_uri() ?>/assets/img/common/feature3.jpg" alt="feature1" loading="lazy">
           </figure>
           <div class="p-sub-feature__body">
             <div class="p-sub-feature__titlebox">
@@ -52,7 +59,7 @@
         </div>
         <div class="p-sub-about__feature p-sub-feature fadeUpTrigger">
           <figure class="p-sub-feature__img">
-            <img src="<?php echo get_template_directory_uri() ?>/assets/img/common/feature4.jpg" alt="mv3">
+            <img src="<?php echo get_template_directory_uri() ?>/assets/img/common/feature4.jpg" alt="feature1" loading="lazy">
           </figure>
           <div class="p-sub-feature__body">
             <div class="p-sub-feature__titlebox">
@@ -64,7 +71,7 @@
         </div>
         <div class="p-sub-about__feature p-sub-feature fadeUpTrigger">
           <figure class="p-sub-feature__img">
-            <img src="<?php echo get_template_directory_uri() ?>/assets/img/common/feature5.jpg" alt="mv3">
+            <img src="<?php echo get_template_directory_uri() ?>/assets/img/common/feature5.jpg" alt="feature1" loading="lazy">
           </figure>
           <div class="p-sub-feature__body">
             <div class="p-sub-feature__titlebox">
@@ -82,7 +89,7 @@
         <!-- カード -->
         <div class="c-card p-cardlist__item fadeUpTrigger">
           <figure class="c-card__img">
-            <img src="<?php echo get_template_directory_uri() ?>/assets/img/common/introduction1.jpg" alt="mv3">
+            <img src="<?php echo get_template_directory_uri() ?>/assets/img/common/introduction1.jpg" alt="feature1" loading="lazy">
           </figure>
           <div class="c-card__body">
             <h3 class="c-card__title">駐車場</h3>
@@ -92,7 +99,7 @@
         <!-- カード -->
         <div class="c-card p-cardlist__item fadeUpTrigger">
           <figure class="c-card__img">
-            <img src="<?php echo get_template_directory_uri() ?>/assets/img/common/introduction2.jpg" alt="mv3">
+            <img src="<?php echo get_template_directory_uri() ?>/assets/img/common/introduction2.jpg" alt="feature2" loading="lazy">
           </figure>
           <div class="c-card__body">
             <h3 class="c-card__title">受付</h3>
@@ -102,7 +109,7 @@
         <!-- カード -->
         <div class="c-card p-cardlist__item fadeUpTrigger">
           <figure class="c-card__img">
-            <img src="<?php echo get_template_directory_uri() ?>/assets/img/common/introduction3.jpg" alt="mv3">
+            <img src="<?php echo get_template_directory_uri() ?>/assets/img/common/introduction3.jpg" alt="feature3" loading="lazy">
           </figure>
           <div class="c-card__body">
             <h3 class="c-card__title">待合室</h3>
@@ -112,7 +119,7 @@
         <!-- カード -->
         <div class="c-card p-cardlist__item fadeUpTrigger">
           <figure class="c-card__img">
-            <img src="<?php echo get_template_directory_uri() ?>/assets/img/common/introduction4.jpg" alt="mv3">
+            <img src="<?php echo get_template_directory_uri() ?>/assets/img/common/introduction4.jpg" alt="feature4" loading="lazy">
           </figure>
           <div class="c-card__body">
             <h3 class="c-card__title">診察室</h3>
@@ -122,7 +129,7 @@
         <!-- カード -->
         <div class="c-card p-cardlist__item fadeUpTrigger">
           <figure class="c-card__img">
-            <img src="<?php echo get_template_directory_uri() ?>/assets/img/common/introduction5.jpg" alt="mv3">
+            <img src="<?php echo get_template_directory_uri() ?>/assets/img/common/introduction5.jpg" alt="feature5" loading="lazy">
           </figure>
           <div class="c-card__body">
             <h3 class="c-card__title">レントゲン</h3>
@@ -132,7 +139,7 @@
         <!-- カード -->
         <div class="c-card p-cardlist__item fadeUpTrigger">
           <figure class="c-card__img">
-            <img src="<?php echo get_template_directory_uri() ?>/assets/img/common/introduction6.jpg" alt="mv3">
+            <img src="<?php echo get_template_directory_uri() ?>/assets/img/common/introduction6.jpg" alt="feature6" loading="lazy">
           </figure>
           <div class="c-card__body">
             <h3 class="c-card__title">滅菌器</h3>

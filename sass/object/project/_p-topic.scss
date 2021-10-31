@@ -1,0 +1,9 @@
+.p-topic{
+  display: flex;
+  padding: rem(8);
+  border-bottom: 1px solid $border-color;  
+}
+
+.p-topic__text{
+  margin-left: rem(48);
+}

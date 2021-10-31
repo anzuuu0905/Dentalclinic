@@ -578,6 +578,10 @@ summary {
 
 /* Remove all animations and transitions for people that prefer not to see them */
 
+.l-breadcrumb {
+	margin-top: 1.5rem;
+}
+
 .l-footer {
 	margin-top: 4rem;
 }
@@ -595,8 +599,8 @@ summary {
 	margin-top: 4rem;
 }
 
-.l-reception {
-	margin-top: 4rem;
+.l-pager {
+	margin-top: 3rem;
 }
 
 .c-card {
@@ -898,18 +902,9 @@ summary {
 	margin-top: 1.5rem;
 }
 
-.p-calender__box {
-	margin-top: 1.5rem;
-}
-
-.o-event-calendar {
-	height: 200px;
-	width: 200px;
-}
-
-.xo-manths {
-	height: 200px;
-	width: 200px;
+.xo-event-calendar {
+	max-width: 100%;
+	width: 25rem;
 }
 
 .p-cardlist {
@@ -930,7 +925,7 @@ summary {
 	border-radius: 10px;
 	box-sizing: border-box;
 	display: inline-block;
-	margin-top: 1.5rem;
+	margin-top: 2rem;
 	max-width: inherit;
 	width: inherit;
 }
@@ -996,10 +991,6 @@ summary {
 	font-size: 1rem;
 }
 
-.p-footer {
-	background-color: #d2d2d2;
-}
-
 .p-footer__inner {
 	padding: 0.5rem;
 }
@@ -1007,6 +998,13 @@ summary {
 .p-footer__copyright {
 	display: flex;
 	justify-content: center;
+	margin-top: 1.5rem;
+}
+
+.p-footer__logo {
+	margin-top: 3rem;
+	max-width: 80%;
+	width: 18.75rem;
 }
 
 .p-gnav__menu {
@@ -1078,7 +1076,9 @@ summary {
 	justify-content: space-between;
 }
 
+.p-header.m_fixed,
 .p-header__sp.m_fixed {
+	left: 0;
 	position: fixed;
 	top: 0;
 	z-index: 1000;
@@ -1313,7 +1313,7 @@ summary {
 }
 
 .p-sub-about__messagebox {
-	margin-top: 3rem;
+	margin-top: 4rem;
 }
 
 .p-sub-about__subtitle {
@@ -1461,6 +1461,38 @@ summary {
 	margin-top: 4rem;
 }
 
+.p-sub-topic__box {
+	margin: 4rem auto 0;
+}
+
+.p-sub-topic__title {
+	margin-top: 1rem;
+}
+
+.p-sub-topic__text {
+	margin-top: 4rem;
+}
+
+.p-sub-topic__pager {
+	align-items: center;
+	color: #8ac343;
+	display: flex;
+	justify-content: center;
+	margin-top: 5rem;
+}
+
+.p-sub-topic__btn {
+	margin-left: 2rem;
+}
+
+.p-sub-topic__after {
+	margin-left: 2rem;
+}
+
+.p-sub-topics__list {
+	margin-top: 4rem;
+}
+
 .p-tel {
 	border: 1px solid #8ac343;
 	border-radius: 1rem;
@@ -1484,6 +1516,38 @@ summary {
 .p-test {
 	color: red;
 	font-size: 1.25rem;
+}
+
+.p-topic {
+	border-bottom: 1px solid #d2d2d2;
+	display: flex;
+	padding: 0.5rem;
+}
+
+.p-topic__text {
+	margin-left: 3rem;
+}
+
+.p-topics__item {
+	margin: 1.5rem auto 0;
+}
+
+.p-topics__title {
+	text-align: center;
+}
+
+.p-topics {
+	background-color: #F0FCE5;
+}
+
+.p-topics__inner {
+	padding: 3rem;
+}
+
+.p-topics__btn {
+	display: flex;
+	justify-content: center;
+	margin-top: 1.5rem;
 }
 
 .p-treatment__inner {
@@ -1545,6 +1609,42 @@ body.login {
 	background-size: cover;
 }
 
+.page-numbers {
+	display: flex;
+	justify-content: center;
+}
+
+.prev .page-numbers {
+	border: 0.0625rem solid #8ac343;
+	color: #333;
+	margin-right: 1.5rem;
+	padding: 0.3125rem 0.8125rem;
+}
+
+li .page-numbers {
+	border: 0.0625rem solid #8ac343;
+	color: #333;
+	margin-right: 1rem;
+	padding: 0.3125rem 0.625rem;
+}
+
+li .page-numbers:hover:not(.current) {
+	background-color: #8ac343;
+	color: #fff;
+}
+
+.next .page-numbers {
+	border: 0.0625rem solid #8ac343;
+	color: #fff;
+	margin-right: 1.5rem;
+	padding: 0.3125rem 0.8125rem;
+}
+
+.page-numbers .current {
+	background-color: #8ac343;
+	color: #fff;
+}
+
 @media (prefers-reduced-motion: reduce) {
 
 html:focus-within {
@@ -1565,10 +1665,6 @@ html {
 
 html {
 	font-size: 1.6vw;
-}
-
-.l-header {
-	padding: 0.5rem 0 0;
 }
 
 .l-inner {
@@ -1638,6 +1734,10 @@ html {
 
 .p-feature__rightbox {
 	margin-left: 5rem;
+}
+
+.p-header {
+	padding: 0.5rem 0 0;
 }
 
 .p-header__logo {

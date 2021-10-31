@@ -17,7 +17,7 @@
         <!-- カード -->
         <div class="c-card p-cardlist__item fadeUpTrigger">
           <figure class="c-card__img">
-            <img src="<?php echo get_template_directory_uri() ?>/assets/img/common/introduction1.jpg" alt="mv3">
+            <img src="<?php echo get_template_directory_uri() ?>/assets/img/common/introduction1.jpg"  alt="introduction1" loading="lazy">
           </figure>
           <div class="c-card__body">
             <h3 class="c-card__title">駐車場</h3>
@@ -27,7 +27,7 @@
         <!-- カード -->
         <div class="c-card p-cardlist__item fadeUpTrigger">
           <figure class="c-card__img">
-            <img src="<?php echo get_template_directory_uri() ?>/assets/img/common/introduction2.jpg" alt="mv3">
+            <img src="<?php echo get_template_directory_uri() ?>/assets/img/common/introduction2.jpg"  alt="introduction2" loading="lazy">
           </figure>
           <div class="c-card__body">
             <h3 class="c-card__title">受付</h3>
@@ -37,7 +37,7 @@
         <!-- カード -->
         <div class="c-card p-cardlist__item fadeUpTrigger">
           <figure class="c-card__img">
-            <img src="<?php echo get_template_directory_uri() ?>/assets/img/common/introduction3.jpg" alt="mv3">
+            <img src="<?php echo get_template_directory_uri() ?>/assets/img/common/introduction3.jpg"  alt="introduction3" loading="lazy">
           </figure>
           <div class="c-card__body">
             <h3 class="c-card__title">待合室</h3>
@@ -47,7 +47,7 @@
         <!-- カード -->
         <div class="c-card p-cardlist__item fadeUpTrigger">
           <figure class="c-card__img">
-            <img src="<?php echo get_template_directory_uri() ?>/assets/img/common/introduction4.jpg" alt="mv3">
+            <img src="<?php echo get_template_directory_uri() ?>/assets/img/common/introduction4.jpg"  alt="introduction4" loading="lazy">
           </figure>
           <div class="c-card__body">
             <h3 class="c-card__title">診察室</h3>
@@ -57,7 +57,7 @@
         <!-- カード -->
         <div class="c-card p-cardlist__item fadeUpTrigger">
           <figure class="c-card__img">
-            <img src="<?php echo get_template_directory_uri() ?>/assets/img/common/introduction5.jpg" alt="mv3">
+            <img src="<?php echo get_template_directory_uri() ?>/assets/img/common/introduction5.jpg"  alt="introduction5" loading="lazy">
           </figure>
           <div class="c-card__body">
             <h3 class="c-card__title">レントゲン</h3>
@@ -67,7 +67,7 @@
         <!-- カード -->
         <div class="c-card p-cardlist__item fadeUpTrigger">
           <figure class="c-card__img">
-            <img src="<?php echo get_template_directory_uri() ?>/assets/img/common/introduction6.jpg" alt="mv3">
+            <img src="<?php echo get_template_directory_uri() ?>/assets/img/common/introduction6.jpg"  alt="introduction6" loading="lazy">
           </figure>
           <div class="c-card__body">
             <h3 class="c-card__title">滅菌器</h3>

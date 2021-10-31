@@ -7,12 +7,19 @@
     </div>
   </div>
   <div class="p-sub-staff__inner l-inner">
-    <section class="p-sub-staff__list">
-    <!-- Smart Custom Fieldで情報取得する -->
-    <?php
-      $members = SCF::get('member');  //member:SCFでの繰り返しグループ名として設定した名前、members:配列名
-      foreach ($members as $member ) {  //$members配列を1件ずつ$memberに格納
-    ?>
+   <div class="l-breadcrumb">
+      <?php if(function_exists('bcn_display'))
+        {
+            bcn_display();
+        }?>
+    </div>
+
+    <div class="p-sub-staff__list">
+      <!-- Smart Custom Fieldで情報取得する -->
+      <?php
+        $members = SCF::get('member');  //member:SCFでの繰り返しグループ名として設定した名前、members:配列名
+        foreach ($members as $member ) {  //$members配列を1件ずつ$memberに格納
+      ?>
       <div class="p-sub-staff__item p-staff">
         <div class="p-staff__inner">
           <div class="p-staff__wrapper">
@@ -22,7 +29,7 @@
                 <!-- [0] 画像のurl
                      [1] 画像の幅(width)
                      [2] 画像の高さ(height) -->
-                <img src="<?php echo wp_get_attachment_image_src($member['picture'] , 'full')[0]; ?>"  alt="<?php echo $member['name']; ?>">
+                <img src="<?php echo wp_get_attachment_image_src($member['picture'] , 'full')[0]; ?>"  alt="<?php echo $member['name']; ?>"  loading="lazy">
               </figure>
               <!-- 配列に格納された1件の「name」を出力する -->
               <p class="p-staff__name"><?php echo $member['name']; ?></p> 
@@ -67,13 +74,8 @@
           </div>
         </div>
       </div>
-    <? } ?>
-    </section>
-
-
-
-
+      <? } ?>
+    </div>
   </div>
-
-</div>
+</section>
 <?php get_footer(); ?>

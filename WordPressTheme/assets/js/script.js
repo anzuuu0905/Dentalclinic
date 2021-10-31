@@ -5,22 +5,29 @@ jQuery(function ($) {
 	});
 
 	//ヘッダー追従（PC）
-	jQuery(window).on('scroll', function () {
-		if (50 < jQuery(this).scrollTop()) { // 50px以上スクロールしたら
-			jQuery('.p-gnav').addClass('m_fixed');
-		} else {
-			jQuery('.p-gnav').removeClass('m_fixed');
-		}
-	});
+	// jQuery(window).on('scroll', function () {
+	// 	if (50 < jQuery(this).scrollTop()) { // 50px以上スクロールしたら
+	// 		jQuery('.p-header').addClass('m_fixed');
+	// 	} else {
+	// 		jQuery('.p-header').removeClass('m_fixed');
+	// 	}
+	// });
+	// jQuery(window).on('scroll', function () {
+	// 	if (50 < jQuery(this).scrollTop()) { // 50px以上スクロールしたら
+	// 		jQuery('.p-gnav').addClass('m_fixed');
+	// 	} else {
+	// 		jQuery('.p-gnav').removeClass('m_fixed');
+	// 	}
+	// });
 
 	//ヘッダー追従（スマホ）
-	jQuery(window).on('scroll', function () {
-		if (50 < jQuery(this).scrollTop()) { // 50px以上スクロールしたら
-			jQuery('.p-header__sp').addClass('m_fixed');
-		} else {
-			jQuery('.p-header__sp').removeClass('m_fixed');
-		}
-	});
+	// jQuery(window).on('scroll', function () {
+	// 	if (50 < jQuery(this).scrollTop()) { // 50px以上スクロールしたら
+	// 		jQuery('.p-header__sp').addClass('m_fixed');
+	// 	} else {
+	// 		jQuery('.p-header__sp').removeClass('m_fixed');
+	// 	}
+	// });
 
 	// TOPへボタンの作成
 	var $top = $('.c-top');

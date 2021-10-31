@@ -1,12 +1,19 @@
 <?php get_header(); ?>
-
+<?php
+    $home = esc_url(home_url('/'));
+    $about = esc_url(home_url('/about/'));
+    $treatment = esc_url(home_url('/treatment/'));
+    $staff = esc_url(home_url('/staff/'));
+    $topics = esc_url(home_url('/topics/'));
+    $access = esc_url(home_url('/access/'));
+  ?>
 
 <section class="p-mv">
   <div class="p-mv__slick">
     <div class="p-slick">
-      <div><img src="<?php echo get_template_directory_uri() ?>/assets/img/common/mv1.jpg" alt="mv1"></div>
-      <div><img src="<?php echo get_template_directory_uri() ?>/assets/img/common/mv2.jpg" alt="mv2"></div>
-      <div><img src="<?php echo get_template_directory_uri() ?>/assets/img/common/mv3.jpg" alt="mv3"></div>
+      <div><img src="<?php echo get_template_directory_uri() ?>/assets/img/common/mv1.jpg" alt="mv1" loading="lazy"></div>
+      <div><img src="<?php echo get_template_directory_uri() ?>/assets/img/common/mv2.jpg" alt="mv2" loading="lazy"></div>
+      <div><img src="<?php echo get_template_directory_uri() ?>/assets/img/common/mv3.jpg" alt="mv3" loading="lazy"></div>
     </div>
   </div>
 </section>
@@ -35,8 +42,8 @@
     </div>
     <!-- ボタン -->
     <div class="p-about__btn c-btn">
-  <a href="#">当院についてはこちらから</a>
-</div>
+       <a href="<?php echo $about ?>">当院についてはこちらから</a>
+    </div>
   </div>
 </section>
 
@@ -48,7 +55,7 @@
       <!-- カード -->
       <a href="" class="c-card p-cardlist__item fadeUpTrigger">
         <figure class="c-card__img">
-          <img src="<?php echo get_template_directory_uri() ?>/assets/img/common/treatment1.jpg" alt="mv3">
+          <img src="<?php echo get_template_directory_uri() ?>/assets/img/common/treatment1.jpg" alt="treatment1" loading="lazy">
         </figure>
         <div class="c-card__body">
           <h3 class="c-card__title">一般歯科</h3>
@@ -62,7 +69,7 @@
       <!-- カード -->
       <a href="" class="c-card p-cardlist__item fadeUpTrigger">
         <figure class="c-card__img">
-          <img src="<?php echo get_template_directory_uri() ?>/assets/img/common/treatment2.jpg" alt="mv3">
+          <img src="<?php echo get_template_directory_uri() ?>/assets/img/common/treatment2.jpg"  alt="treatment2" loading="lazy">
         </figure>
         <div class="c-card__body">
           <h3 class="c-card__title">小児歯科</h3>
@@ -76,7 +83,7 @@
       <!-- カード -->
       <a href="" class="c-card p-cardlist__item fadeUpTrigger">
         <figure class="c-card__img">
-          <img src="<?php echo get_template_directory_uri() ?>/assets/img/common/treatment3.jpg" alt="mv3">
+          <img src="<?php echo get_template_directory_uri() ?>/assets/img/common/treatment3.jpg"  alt="treatment3" loading="lazy">
         </figure>
         <div class="c-card__body">
           <h3 class="c-card__title">予防歯科</h3>
@@ -90,13 +97,44 @@
 
     </div>
     <div class="p-info__btn c-btn fadeUpTrigger">
-      <a href="#">診察案内はこちらから</a>
+      <a href="<?php echo $treatment ?>">診察案内はこちらから</a>
+    </div>
+  </div>
+</section>
+
+<section class="l-margin p-topics fadeUpTrigger">
+  <div class="p-topics__inner l-inner">
+    <h2 class="p-topics__title">新着情報</h2>
+    <div class="p-topics__items">      
+      <?php
+        $topics_query = new WP_Query(
+          array(
+            'post_type'      => 'post',
+            'posts_per_page' => 3,
+          )
+        );
+      ?>
+    <?php if ( $topics_query->have_posts() ) : ?>
+        <?php while ( $topics_query->have_posts() ) : ?>
+          <?php $topics_query->the_post(); ?>
+          <a href="<?php the_permalink(); ?>" class="p-topics__item p-topic">
+            <time datetime="<?php the_time('c'); ?>" class="p-topic__date"><?php the_time('Y.m.d'); ?>
+            </time>
+            <p class="p-topic__text"><?php the_title(); ?></p>
+          </a>
+        <?php endwhile; ?>
+      <?php endif; ?>
+      <?php wp_reset_postdata(); ?>
+    </div>
+    <!-- ボタン -->
+    <div class="p-topics__btn c-btn fadeUpTrigger">
+      <a href="<?php echo $topics ?>">新着情報はこちらから</a>
     </div>
   </div>
 </section>
 
 <!-- 診察時間 -->
-<div class="p-reception">
+<!-- <div class="p-reception">
   <div class="p-reception__inner l-inner ">
     <section class="l-reception p-consultation fadeUpTrigger">
       <div class="p-consultation__inner">
@@ -154,7 +192,7 @@
       </div>
     </section>
   </div>
-</div>
+</div> -->
 
 
 <?php get_footer(); ?>

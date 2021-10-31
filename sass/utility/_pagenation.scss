@@ -1,0 +1,33 @@
+.page-numbers{
+  display: flex;
+  justify-content: center;
+}
+.prev .page-numbers{
+  margin-right: rem(24);
+  padding: rem(5) rem(13);
+  color:$text-color;
+  border: rem(1) solid $text-color2;
+}
+li .page-numbers{
+  margin-right: rem(16);
+  color:$text-color;
+  padding: rem(5) rem(10);
+  border: rem(1) solid $text-color2;
+}
+
+li .page-numbers:hover:not(.current){
+  background-color: $text-color2;
+  color: $background;
+}
+
+.next .page-numbers{
+  margin-right: rem(24);
+  padding: rem(5) rem(13);
+  color: $background;
+  border: rem(1) solid $text-color2;
+}
+
+.page-numbers .current{
+  color: $background;
+  background-color: $text-color2;
+}

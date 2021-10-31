@@ -1,4 +1,7 @@
 .p-header{
+	@include mq(tab){
+    padding: rem(8) 0 0;
+  }
 }
 
 .p-header__box,
@@ -10,9 +13,11 @@
 	background: $background;
 }
 
+.p-header.m_fixed,
 .p-header__sp.m_fixed {
 	position: fixed;
 	top: 0;
+	left: 0;
 	z-index: $z-index-top;
 }
 
