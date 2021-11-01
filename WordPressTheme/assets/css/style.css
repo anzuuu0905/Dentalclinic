@@ -1076,9 +1076,7 @@ summary {
 	justify-content: space-between;
 }
 
-.p-header.m_fixed,
 .p-header__sp.m_fixed {
-	left: 0;
 	position: fixed;
 	top: 0;
 	z-index: 1000;
@@ -1667,6 +1665,10 @@ html {
 	font-size: 1.6vw;
 }
 
+.l-header {
+	padding: 0.5rem 0 0;
+}
+
 .l-inner {
 	padding-left: 25px;
 	padding-right: 25px;
@@ -1734,10 +1736,6 @@ html {
 
 .p-feature__rightbox {
 	margin-left: 5rem;
-}
-
-.p-header {
-	padding: 0.5rem 0 0;
 }
 
 .p-header__logo {
