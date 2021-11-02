@@ -32,7 +32,7 @@ $breakpoints: (
 	"tab": "screen and (min-width: #{$l-tab})",
 	"pc": "screen and (min-width: #{$l-inner})",
 	"lg": "screen and (min-width: #{$l-pc})",
-	"max-tab": "screen and (max-width: #{$l-tab})",
+	"max-tab": "screen and (max-width: 767px )",
 );
 
 

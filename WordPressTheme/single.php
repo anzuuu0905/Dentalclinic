@@ -16,12 +16,19 @@
             bcn_display();
         }?>
     </div>
-    <div class="p-sub-topic__box">
-      <time datetime="<?php the_time('c') ?>" class="p-sub-topic__date"><?php the_time('Y.m.d') ?>
-      </time>
-      <h2 class="p-sub-topic__title"><?php the_title(); ?></h2>
-      <p class="p-sub-topic__text"><?php the_content(); ?></p>
-    </div>
+
+      <?php if(have_posts()): ?>
+        <?php while(have_posts()): the_post(); ?>
+
+          <div class="p-sub-topic__box">
+            <time datetime="<?php the_time('c') ?>" class="p-sub-topic__date"><?php the_time('Y.m.d') ?>
+            </time>
+            <h2 class="p-sub-topic__title"><?php the_title(); ?></h2>
+            <p class="p-sub-topic__text"><?php the_content(); ?></p>
+          </div>
+        <?php endwhile; ?>
+      <?php endif; ?>
+
   </div>
 
   <div class="p-sub-topic__pager">

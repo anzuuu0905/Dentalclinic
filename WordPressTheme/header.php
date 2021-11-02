@@ -25,6 +25,8 @@
     $staff = esc_url(home_url('/staff/'));
     $topics = esc_url(home_url('/topics/'));
     $access = esc_url(home_url('/access/'));
+    $contact = esc_url(home_url('/contact/'));
+    
   ?>
 
   <header class="l-header p-header
@@ -102,6 +104,7 @@
             <li class="p-drawer-menu__item"><a href="<?php echo $staff ?>">スタッフ紹介</a></li>
             <li class="p-drawer-menu__item"><a href="<?php echo $topics ?>">お知らせ</a></li>
             <li class="p-drawer-menu__item"><a href="<?php echo $access ?>">アクセス</a></li>
+            <li class="p-drawer-menu__item"><a href="<?php echo $contact ?>">お問い合わせ</a></li>
           </ul>
         </nav>
         <div class="p-header__telbox p-tel">
@@ -120,6 +123,7 @@
             <li class="p-gnav__item"><a href="<?php echo $staff ?>">スタッフ紹介</a></li>
             <li class="p-gnav__item"><a href="<?php echo $topics ?>">お知らせ</a></li>
             <li class="p-gnav__item"><a href="<?php echo $access ?>">アクセス</a></li>
+            <li class="p-gnav__item"><a href="<?php echo $contact ?>">お問い合わせ</a></li>
           </ul>
         </nav>
       </div>

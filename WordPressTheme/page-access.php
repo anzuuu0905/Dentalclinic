@@ -22,16 +22,16 @@
     </div>
     <div class="p-sub-access__box fadeUpTrigger">
 
-    <?php
-      $accesslist = SCF::get('access'); 
-      foreach ($accesslist as $access ) {
-    ?>
-      <div class="p-sub-access__item">
-        <dl class="p-sub-access__title"><?php echo $access['access-icon']; ?> <?php echo $access['access-title']; ?></dl>
-        <dt class="p-sub-access__text"><?php echo $access['access-text']; ?></dt>
-      </div>
-    <? } ?>
-    </ｄiv>
+      <?php
+        $accesslist = SCF::get('access'); 
+        foreach ($accesslist as $access ) {
+      ?>
+        <div class="p-sub-access__item">
+          <dl class="p-sub-access__title"><?php echo $access['access-icon']; ?> <?php echo $access['access-title']; ?></dl>
+          <dt class="p-sub-access__text"><?php echo $access['access-text']; ?></dt>
+        </div>
+      <? } ?>
+    </div>
   </div>
 </div>
 <?php get_footer(); ?>
