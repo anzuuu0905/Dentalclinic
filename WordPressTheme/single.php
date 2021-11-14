@@ -6,7 +6,7 @@
   <!-- 共通タイトル -->
   <div class="c-comon-title">
     <div class="c-comon-title__inner">
-      <h1 class="c-comon-title__title">お知らせ</h1>
+      <h2 class="c-comon-title__title">お知らせ</h2>
     </div>
   </div>
   <div class="p-sub-topic__inner l-inner">
@@ -23,7 +23,7 @@
           <div class="p-sub-topic__box">
             <time datetime="<?php the_time('c') ?>" class="p-sub-topic__date"><?php the_time('Y.m.d') ?>
             </time>
-            <h2 class="p-sub-topic__title"><?php the_title(); ?></h2>
+            <h3 class="p-sub-topic__title"><?php the_title(); ?></h3>
             <p class="p-sub-topic__text"><?php the_content(); ?></p>
           </div>
         <?php endwhile; ?>

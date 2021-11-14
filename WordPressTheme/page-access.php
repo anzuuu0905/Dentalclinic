@@ -3,7 +3,7 @@
   <!-- 共通タイトル -->
   <div class="c-comon-title">
     <div class="c-comon-title__inner">
-      <h1 class="c-comon-title__title"><?php the_title(); ?></h1>
+      <h2 class="c-comon-title__title"><?php the_title(); ?></h2>
     </div>
   </div>
   <div class="p-sub-access__inner l-inner">
@@ -15,7 +15,7 @@
     </div>
 
     <div class="p-sub-access__map p-map fadeUpTrigger">
-      <h2 class="p-map__title">アクセスマップ</h2>
+      <h3 class="p-map__title">アクセスマップ</h3>
       <div class="p-map__iframe">
       <?php the_content(); ?>  
       </div>
@@ -26,10 +26,10 @@
         $accesslist = SCF::get('access'); 
         foreach ($accesslist as $access ) {
       ?>
-        <div class="p-sub-access__item">
-          <dl class="p-sub-access__title"><?php echo $access['access-icon']; ?> <?php echo $access['access-title']; ?></dl>
-          <dt class="p-sub-access__text"><?php echo $access['access-text']; ?></dt>
-        </div>
+        <dl class="p-sub-access__item">
+          <dt class="p-sub-access__title"><?php echo $access['access-icon']; ?> <?php echo $access['access-title']; ?></dt>
+          <dd class="p-sub-access__text"><?php echo $access['access-text']; ?></dd>
+        </dl>
       <? } ?>
     </div>
   </div>

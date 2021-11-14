@@ -1,9 +1,11 @@
-// .l-reception{
-//   margin-top: rem(64);
-// }
+.l-reception{
+  margin: 0 auto;
+}
 
 .l-reception + .l-reception{
+  margin-top: rem(64);
   @include mq(tab){
+    margin-top: 0;
     margin-left: rem(64);
   }
 }

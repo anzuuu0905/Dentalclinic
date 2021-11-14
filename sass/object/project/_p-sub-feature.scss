@@ -30,8 +30,10 @@
 }
 
 .p-sub-feature:nth-of-type(even) .p-sub-feature__body{
-  padding-left: 0;
-  padding-right: rem(24);
+  @include mq(tab){
+    padding-left: 0;
+    padding-right: rem(24);
+  }
 }
 
 .p-sub-feature__no{
@@ -63,8 +65,11 @@
 }
 
 .p-sub-feature__img{
-  width: rem(320);
   max-width: 100%;
+  width: 100%;
+  @include mq(tab){
+  width: rem(320);
+  }
 }
 
 .p-sub-feature__img img{

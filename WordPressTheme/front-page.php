@@ -16,6 +16,9 @@
       <div><img src="<?php echo get_template_directory_uri() ?>/assets/img/common/mv3.jpg" alt="mv3" loading="lazy"></div>
     </div>
   </div>
+  <div class="p-mv__textbox">
+    <p class="p-mv__text">　健康なお口で人生を豊かに　</p>
+  </div>
 </section>
 
 <!-- 当院について -->
@@ -53,7 +56,7 @@
     <h2 class="p-info__title fadeUpTrigger">診察案内</h2>
     <div class="p-info__cards p-cardlist">  <!-- p-cardlistは、3つのカードの集合体を示す -->
       <!-- カード -->
-      <a href="" class="c-card p-cardlist__item fadeUpTrigger">
+      <a href="<?php echo $treatment ?>" class="c-card p-cardlist__item fadeUpTrigger">
         <figure class="c-card__img">
           <img src="<?php echo get_template_directory_uri() ?>/assets/img/common/treatment1.jpg" alt="treatment1" loading="lazy">
         </figure>
@@ -67,7 +70,7 @@
         </div> -->
       </a>
       <!-- カード -->
-      <a href="" class="c-card p-cardlist__item fadeUpTrigger">
+      <a href="<?php echo $treatment ?>" class="c-card p-cardlist__item fadeUpTrigger">
         <figure class="c-card__img">
           <img src="<?php echo get_template_directory_uri() ?>/assets/img/common/treatment2.jpg"  alt="treatment2" loading="lazy">
         </figure>
@@ -81,7 +84,7 @@
         </div> -->
       </a>
       <!-- カード -->
-      <a href="" class="c-card p-cardlist__item fadeUpTrigger">
+      <a href="<?php echo $treatment ?>" class="c-card p-cardlist__item fadeUpTrigger">
         <figure class="c-card__img">
           <img src="<?php echo get_template_directory_uri() ?>/assets/img/common/treatment3.jpg"  alt="treatment3" loading="lazy">
         </figure>

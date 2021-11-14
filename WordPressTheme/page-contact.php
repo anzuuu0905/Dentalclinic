@@ -3,7 +3,7 @@
   <!-- 共通タイトル -->
   <div class="c-comon-title">
     <div class="c-comon-title__inner">
-      <h1 class="c-comon-title__title"><?php the_title(); ?></h1>
+      <h2 class="c-comon-title__title"><?php the_title(); ?></h2>
     </div>
   </div>
   <div class="p-sub-contact__inner l-inner">

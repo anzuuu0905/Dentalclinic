@@ -1,9 +1,16 @@
 .p-topic{
   display: flex;
+  flex-direction: column;
   padding: rem(8);
   border-bottom: 1px solid $border-color;  
+  @include mq(tab){
+    flex-direction:initial;
+  }
 }
 
 .p-topic__text{
-  margin-left: rem(48);
+  margin-left: 0;
+  @include mq(tab){
+    margin-left: rem(48);
+  }
 }

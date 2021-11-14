@@ -3,7 +3,8 @@
 
 .p-reception__inner{
   display: flex;
-  flex: wrap;
+  flex-wrap: wrap;
+  // flex: wrap;
   width: $l-inner;
   max-width: 100%;
   margin: 0 auto;

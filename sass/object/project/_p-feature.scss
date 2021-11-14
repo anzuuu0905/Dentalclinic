@@ -9,6 +9,7 @@
   display: flex;
   justify-content: center;
   flex-direction: column;
+
   @include mq(tab){
     flex-direction:initial;
     flex-wrap: wrap;
@@ -21,8 +22,9 @@
 
 .p-feature__rightbox,
 .p-feature__leftbox{
-  width: 350px;
+  width: rem(300);
   max-width: 100%;
+  margin: 0 auto;
 }
 
 .p-feature__rightbox{
@@ -32,4 +34,6 @@
 }
 .p-feature__text{
   font-size: rem(16);
+  @include mq(tab){
+  }
 }

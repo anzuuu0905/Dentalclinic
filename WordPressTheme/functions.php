@@ -27,27 +27,6 @@ add_action( 'after_setup_theme', 'my_setup' );
 
 
 
-/**
- * CSSとJavaScriptの読み込み
- *
- * @codex https://wpdocs.osdn.jp/%E3%83%8A%E3%83%93%E3%82%B2%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%83%A1%E3%83%8B%E3%83%A5%E3%83%BC
- */
-function my_script_init()
-{
-	// style.cssの読み込み
-	wp_enqueue_style( 'style', get_template_directory_uri() . '/assets/css/style.css', array(), '1.0.1', 'all' );
-	wp_enqueue_style( 'slick', 'https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css', array('style'), '1.8.1', 'all' );
-	wp_enqueue_style( 'slick-theme', 'https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css', array('slick'), '1.8.1', 'all' );
-
-	// jQueryの読み込み
-	wp_enqueue_style( 'jquery', 'https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js', array('slick-theme'), '3.6.0', 'all' );
-	// javascriptの読み込み
-	wp_enqueue_script( 'my', get_template_directory_uri() . '/assets/js/script.js', array( 'jquery' ), '1.0.1', true );
-	// slickの読み込み
-	// wp_enqueue_style( 'slick-min', 'https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js', array( 'jquery' ), '1.0.1', 'all' );
-}
-add_action('wp_enqueue_scripts', 'my_script_init');
-
 
 
 
@@ -181,4 +160,44 @@ function loginpage_edit() {?>
 	</style>
 	<?php }
 	add_action( 'login_enqueue_scripts', 'loginpage_edit' );
+
+
+
+
+
+
+
+
+	
+// 最下部に記載 START
+function my_delete_local_jquery() {
+wp_deregister_script('jquery');
+}
+add_action( 'wp_enqueue_scripts', 'my_delete_local_jquery' );
+// 最下部に記載　END
+
+/**
+ * CSSとJavaScriptの読み込み
+ *
+ * @codex https://wpdocs.osdn.jp/%E3%83%8A%E3%83%93%E3%82%B2%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%83%A1%E3%83%8B%E3%83%A5%E3%83%BC
+ */
+function my_script_init()
+{
+	// style.cssの読み込み
+	wp_enqueue_style( 'style', get_template_directory_uri() . '/assets/css/style.css', array(), '1.0.1', 'all' );
+	wp_enqueue_style( 'slick', 'https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css', array('style'), '1.8.1', 'all' );
+	wp_enqueue_style( 'slick-theme', 'https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css', array('slick'), '1.8.1', 'all' );
+
+	// jQueryの読み込み
+	// wp_enqueue_style( 'jquery', 'https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js', array('slick-theme'), '3.6.0', 'all' );
+	// wp_enqueue_script( 'jquery', 'https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js', array('slick-theme'), '3.6.0', 'all' );
+	wp_enqueue_script( 'jquery', 'https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js', array(), '3.6.0', true );
+	wp_enqueue_script( 'jquery-min', 'https://dentalclinic.com/wp-includes/js/jquery/jquery-migrate.min.js', array(), '3.3.2', true );
+	
+	// javascriptの読み込み
+	wp_enqueue_script( 'my', get_template_directory_uri() . '/assets/js/script.js', array( 'jquery-min' ), '1.0.1' , true);
+	// slickの読み込み
+	// wp_enqueue_style( 'slick-min', 'https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js', array( 'jquery' ), '1.0.1', 'all' );
+}
+add_action('wp_enqueue_scripts', 'my_script_init');
 

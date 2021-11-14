@@ -3,7 +3,7 @@
   <!-- 共通タイトル -->
   <div class="c-comon-title">
     <div class="c-comon-title__inner">
-      <h1 class="c-comon-title__title">お知らせ</h1>
+      <h2 class="c-comon-title__title">お知らせ</h2>
     </div>
   </div>
   <div class="p-sub-topics__inner l-inner">
@@ -36,7 +36,7 @@
             'type'          => 'list', // 戻り値の指定 (plain/list)
         )
       );
-      echo preg_replace('/\<h2 class=\"screen-reader-text\"\>(.*?)\<\/h2\>/ui', '', $paginationhtml); 
+      echo preg_replace('/\<h3 class=\"screen-reader-text\"\>(.*?)\<\/h3\>/ui', '', $paginationhtml); 
     ?>
   </div>
 

@@ -3,7 +3,7 @@
   <!-- 共通タイトル -->
   <div class="c-comon-title">
     <div class="c-comon-title__inner">
-      <h1 class="c-comon-title__title"><?php the_title(); ?></h1>
+      <h2 class="c-comon-title__title"><?php the_title(); ?></h2>
     </div>
   </div>
   <div class="p-sub-staff__inner l-inner">
@@ -35,13 +35,13 @@
               <p class="p-staff__name"><?php echo $member['name']; ?></p> 
             </div>
             <div class="p-staff__messagebox fadeUpTrigger">
-              <h2 class="p-staff__subtitle"><?php echo SCF::get('message-title'); ?></h2>
-              <p class="p-staff__message"><?php echo $member['message']; ?> <div class=""></div></p>
+              <h3 class="p-staff__subtitle"><?php echo SCF::get('message-title'); ?></h3>
+              <p class="p-staff__message"><?php echo $member['message']; ?></p>
             </div>
           </div>
           <div class="p-staff__infowrapper">
             <div class="p-staff__infobox fadeUpTrigger">
-              <h2 class="p-staff__subtitle"><?php echo SCF::get('career-title'); ?></h2>
+              <h3 class="p-staff__subtitle"><?php echo SCF::get('career-title'); ?></h3>
               <ul class="p-staff_infolist">
               <!-- 配列に格納されたcareer1～career6を出力する -->
               <!-- 1～6を変数$iでループさせ取得 -->
@@ -58,7 +58,7 @@
               </ul>
             </div>
             <div class="p-staff__belongbox fadeUpTrigger">
-              <h2 class="p-staff__subtitle"><?php echo SCF::get('belong-title'); ?></h2>
+              <h3 class="p-staff__subtitle"><?php echo SCF::get('belong-title'); ?></h3>
               <ul class="p-staff_infolist">
                 <?php 
                   for ($i=1; $i<=6; $i++) {

@@ -50,7 +50,6 @@
         <div class="p-footer__logo">
           <!-- Hiro歯科クリニック -->
           <img class="c-logo" src="<?php echo get_template_directory_uri() ?>/assets/img/common/logo.png"
-          　　　srcset="<?php echo get_template_directory_uri() ?>/assets/img/common/logo.png"
               alt="Hiro歯科クリニック" loading="lazy">
         </div>
         <p class="p-footer__address">〒491-0858 愛知県一宮市栄３丁目１</p>
@@ -81,5 +80,6 @@
 <?php wp_footer(); ?>
 <!-- slickのJavaScript -->
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
 </body>
 </html>
