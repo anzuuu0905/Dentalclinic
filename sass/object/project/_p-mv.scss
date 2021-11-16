@@ -22,6 +22,7 @@
 }
 
 .p-mv__textbox{
+  // opacity: 0;
   font-size: rem(24);
   margin: rem(24);
   display: flex;
@@ -29,11 +30,16 @@
   top: 10vw;
   left: 0;
   align-items: center;
-  // color:$text-color;
+  // color:$background;
   // background-color: $background-layer;
   padding: rem(8);
 }
-
+.p-mv__text{
+  opacity: 0;
+}
+.p-mv__text.p-mv__text.appeartext{
+  opacity: 1;
+}
 .p-mv__text span{opacity: 0;}
 .p-mv__text.appeartext span
   {

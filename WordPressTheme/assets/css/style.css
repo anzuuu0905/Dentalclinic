@@ -1413,6 +1413,14 @@ input[type="radio"]:checked + span::after {
 	top: 10vw;
 }
 
+.p-mv__text {
+	opacity: 0;
+}
+
+.p-mv__text.p-mv__text.appeartext {
+	opacity: 1;
+}
+
 .p-mv__text span {
 	opacity: 0;
 }
