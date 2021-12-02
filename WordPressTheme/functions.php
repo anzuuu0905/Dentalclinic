@@ -162,6 +162,16 @@ function loginpage_edit() {?>
 	add_action( 'login_enqueue_scripts', 'loginpage_edit' );
 
 
+	add_action( 'wp_footer', 'add_thanks_page' );
+	function add_thanks_page() {
+	echo <<< EOD
+	<script>
+	document.addEventListener( 'wpcf7mailsent', function( event ) {
+		location = 'https://https://dentalclinic.com/thanks/'; /* 遷移先のURL */
+	}, false );
+	</script>
+	EOD;
+	}
 
 
 
