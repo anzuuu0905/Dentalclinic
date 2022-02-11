@@ -1,0 +1,15 @@
+.p-pager {
+  display: flex;
+  justify-content: center;
+  color: $text-color2;
+  align-items: center;
+  margin-top: rem(80);
+}
+
+.p-pager__btn {
+  margin-left: rem(32);
+}
+
+.p-pager__after {
+  margin-left: rem(32);
+}

@@ -1,0 +1,135 @@
+.comments {
+  margin-top: rem(36);
+}
+
+.comment {
+  // transition: 0.3s;
+  padding: rem(30);
+  border: 1px solid #ddd;
+  // border-top: 1px solid #ddd;
+  margin-bottom: rem(20);
+}
+
+.comment-author {
+  display: flex;
+  flex-direction: column;
+  min-width: rem(80);
+}
+
+.fn {
+  margin-top: rem(10);
+  text-align: center;
+}
+
+.says {
+  display: none;
+}
+
+.comment-meta {
+  display: flex;
+  justify-content: space-between;
+}
+
+.comment-metadata {
+  margin-left: rem(10);
+}
+.comment-content {
+  padding: rem(10);
+}
+
+.comment-respond {
+  margin-top: rem(10);
+}
+
+.comments-nav {
+  color: #8ac323;
+}
+
+.reply {
+  text-align: right;
+}
+.reply a {
+  // color: #fff;
+  // background: #1467af;
+  // transition: 0.3s;
+  // padding: rem(10);
+
+  background-color: #fff;
+  border: 0.0625rem solid #8ac343;
+  border-radius: rem(25);
+  color: #8ac343;
+  cursor: pointer;
+  display: inline-block;
+  font-size: rem(16);
+  padding: rem(10) rem(30);
+}
+
+// .reply a::after {
+//   content: "";
+//   width: rem(5);
+//   height: rem(5);
+//   border-top: rem(1) solid $text-color2;
+//   border-right: rem(1) solid $text-color2;
+//   margin-left: rem(20);
+//   transform: rotate(45deg);
+// }
+
+.reply a:hover {
+  background-color: $text-color2;
+  color: $background;
+}
+
+.reply a:hover::after {
+  border-color: $background;
+}
+
+//
+
+// .reply {
+//   display: inline-block;
+//   text-align: right;
+// }
+// .reply a {
+//   // display: flex;
+//   // justify-content: space-between;
+//   align-items: center;
+//   margin: 0 auto;
+//   padding: rem(10) rem(30);
+//   color: $text-color2;
+//   font-size: rem(16);
+//   background-color: $background;
+//   border-radius: rem(25);
+//   border: rem(1) solid $text-color2;
+// }
+
+// .reply a::after {
+//   content: "";
+//   width: rem(5);
+//   height: rem(5);
+//   border-top: rem(1) solid $text-color2;
+//   border-right: rem(1) solid $text-color2;
+//   margin-left: rem(20);
+//   transform: rotate(45deg);
+// }
+
+// .reply a:hover {
+//   background-color: $text-color2;
+//   color: $background;
+// }
+
+// .reply a:hover::after {
+//   border-color: $background;
+// }
+//
+
+.required-field-message {
+  display: none;
+}
+
+.comment-form-comment label {
+  display: none;
+}
+
+.form-submit {
+  margin-top: rem(16);
+}

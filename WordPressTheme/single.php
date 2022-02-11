@@ -31,14 +31,14 @@
 
   </div>
 
-  <div class="p-sub-topic__pager">
-    <div class="p-sub-topic__before">
+  <div class="p-sub-topic__pager p-pager">
+    <div class="p-pager__befor">
       <?php next_post_link('%link', '&lt; 前の記事'); ?>
     </div>
-    <div class="p-sub-topic__btn c-btn">
+    <div class="p-pager__btn c-btn">
         <a href="<?php echo $topics ?>">お知らせ一覧</a>
     </div>
-    <div class="p-sub-topic__after">
+    <div class="p-pager__after">
       <?php previous_post_link('%link', '次の記事 &gt;'); ?>
     </div>
   </div>

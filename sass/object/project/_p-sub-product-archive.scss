@@ -1,0 +1,17 @@
+.p-sub-product-archive__list {
+  margin-top: rem(24);
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.p-sub-product-archive__img {
+  max-width: 50%;
+}
+
+.p-sub-product-archive__img img {
+  width: 100%;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}

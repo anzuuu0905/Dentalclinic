@@ -24,6 +24,7 @@
     $treatment = esc_url(home_url('/treatment/'));
     $staff = esc_url(home_url('/staff/'));
     $topics = esc_url(home_url('/topics/'));
+    $products = esc_url(home_url('/archives/products/'));
     $access = esc_url(home_url('/access/'));
     $contact = esc_url(home_url('/contact/'));
     
@@ -100,6 +101,7 @@
             <li class="p-drawer-menu__item"><a href="<?php echo $about ?>">当院について</a></li>
             <li class="p-drawer-menu__item"><a href="<?php echo $treatment ?>">診療案内</a></li>
             <li class="p-drawer-menu__item"><a href="<?php echo $staff ?>">スタッフ紹介</a></li>
+            <li class="p-drawer-menu__item"><a href="<?php echo $products ?>">商品</a></li>
             <li class="p-drawer-menu__item"><a href="<?php echo $topics ?>">お知らせ</a></li>
             <li class="p-drawer-menu__item"><a href="<?php echo $access ?>">アクセス</a></li>
             <li class="p-drawer-menu__item"><a href="<?php echo $contact ?>">お問い合わせ</a></li>
@@ -119,6 +121,7 @@
           <li class="p-gnav__item"><a href="<?php echo $about ?>">当院について</a></li>
             <li class="p-gnav__item"><a href="<?php echo $treatment ?>">診療案内</a></li>
             <li class="p-gnav__item"><a href="<?php echo $staff ?>">スタッフ紹介</a></li>
+            <li class="p-gnav__item"><a href="<?php echo $products ?>">商品</a></li>
             <li class="p-gnav__item"><a href="<?php echo $topics ?>">お知らせ</a></li>
             <li class="p-gnav__item"><a href="<?php echo $access ?>">アクセス</a></li>
             <li class="p-gnav__item"><a href="<?php echo $contact ?>">お問い合わせ</a></li>

@@ -4,6 +4,7 @@
     $about = esc_url(home_url('/about/'));
     $treatment = esc_url(home_url('/treatment/'));
     $staff = esc_url(home_url('/staff/'));
+    $products = esc_url(home_url('/archives/products/'));
     $topics = esc_url(home_url('/topics/'));
     $access = esc_url(home_url('/access/'));
   ?>
@@ -64,10 +65,6 @@
           <h3 class="c-card__title">一般歯科</h3>
           <p class="c-card__text">単に痛いところを治すだけでなく、根本的な原因を特定し、お口の中を健康することを目的として治療します。</p>
         </div>
-        <!-- <div class="c-card__info">
-          <span class="c-card__category">カテゴリ</span>
-          <time class="c-card__time" datetime="2021-01-01">2021/01/01</time>
-        </div> -->
       </a>
       <!-- カード -->
       <a href="<?php echo $treatment ?>" class="c-card p-cardlist__item fadeUpTrigger">
@@ -78,10 +75,6 @@
           <h3 class="c-card__title">小児歯科</h3>
           <p class="c-card__text">一生大切な歯を守るために、歯医者嫌いにしない診療を心がけています。無理やり治療することはせず、お子さまのペースに合わせて診療を行います。</p>
         </div>
-        <!-- <div class="c-card__info">
-          <span class="c-card__category">カテゴリ</span>
-          <time class="c-card__time" datetime="2021-01-01">2021/01/01</time>
-        </div> -->
       </a>
       <!-- カード -->
       <a href="<?php echo $treatment ?>" class="c-card p-cardlist__item fadeUpTrigger">
@@ -92,10 +85,6 @@
           <h3 class="c-card__title">予防歯科</h3>
           <p class="c-card__text">むし歯や歯周病は、「症状が発生してから治療する」のではなく「症状が発生する前に予防する」ことが大切です。定期的に検査することで、見落とされがちな口の病気を早期発見・早期治療できます。</p>
         </div>
-        <!-- <div class="c-card__info">
-          <span class="c-card__category">予防診療</span>
-          <time class="c-card__time" datetime="2021-01-01">2021/01/01</time>
-        </div> -->
       </a>
 
     </div>

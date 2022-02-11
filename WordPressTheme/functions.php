@@ -25,11 +25,6 @@ function my_setup() {
 }
 add_action( 'after_setup_theme', 'my_setup' );
 
-
-
-
-
-
 /**
  * メニューの登録
  *
@@ -167,7 +162,7 @@ function loginpage_edit() {?>
 	echo <<< EOD
 	<script>
 	document.addEventListener( 'wpcf7mailsent', function( event ) {
-		location = 'https://https://dentalclinic.com/thanks/'; /* 遷移先のURL */
+		location = 'http://hirodentalcrinic.local//thanks/'; /* 遷移先のURL */
 	}, false );
 	</script>
 	EOD;
@@ -201,13 +196,98 @@ function my_script_init()
 	// jQueryの読み込み
 	// wp_enqueue_style( 'jquery', 'https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js', array('slick-theme'), '3.6.0', 'all' );
 	// wp_enqueue_script( 'jquery', 'https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js', array('slick-theme'), '3.6.0', 'all' );
+
 	wp_enqueue_script( 'jquery', 'https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js', array(), '3.6.0', true );
-	wp_enqueue_script( 'jquery-min', 'https://dentalclinic.com/wp-includes/js/jquery/jquery-migrate.min.js', array(), '3.3.2', true );
+	wp_enqueue_script( 'jquery-min', home_url( '/' ) . 'wp-includes/js/jquery/jquery-migrate.min.js', array(), '3.3.2', true );
 	
 	// javascriptの読み込み
 	wp_enqueue_script( 'my', get_template_directory_uri() . '/assets/js/script.js', array( 'jquery-min' ), '1.0.1' , true);
+
+
 	// slickの読み込み
 	// wp_enqueue_style( 'slick-min', 'https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js', array( 'jquery' ), '1.0.1', 'all' );
 }
 add_action('wp_enqueue_scripts', 'my_script_init');
+
+/**
+ * ソートオプションを取得
+ * indentは出力されるソースのインデントを行うため、処理には影響なし
+ * @param int $indent
+ * @return string
+ */
+function get_sort_options($indent = 0) {
+	$out = '';
+	// sortに適切な内容がセットされているか
+	$input = filter_input(INPUT_GET, 'sort', FILTER_SANITIZE_STRING);
+	$options = [
+			'modified' => '更新日順',
+			'item'    => '品名順',
+			'comment' => '新着コメント順',
+	];
+	foreach ($options as $value => $option) {
+		// 選択している値の場合は、selected="selected"をセットする
+			$selected = ($value === $input) ? ' selected="selected"' : '';
+			if ($option !== reset($options)) {
+					$out .= str_repeat(' ', $indent * 2);
+			}
+			$out .= '<option value="' . $value . '"' . $selected .'>';
+			$out .= $option . '</option>' . PHP_EOL;
+	}
+	return $out;
+}
+
+/**
+ * メインクエリーの取得条件を更新
+ * 商品アーカイブの場合に実行
+ */
+add_action('pre_get_posts', function ($query) {
+	if (is_admin() || !$query->is_main_query()) {
+			return;
+	}
+	if (is_post_type_archive('products')) {
+			$query->set('posts_per_page', '6');
+			_set_order_condition($query);
+	}
+});
+
+/**
+ * 並び順の条件をセット
+ * @param object $query
+ */
+function _set_order_condition($query) {
+	$sort = filter_input(INPUT_GET, 'sort', FILTER_SANITIZE_STRING);
+	if ($sort === 'item') {
+			$query->set('orderby', 'title');
+			$query->set('order', 'ASC');
+	}
+	elseif ($sort === 'comment') {
+			$query->set('meta_key', 'latest_comment_timestamp');
+			$query->set('meta_type', 'NUMERIC');
+			$query->set('orderby', 'meta_value_num');
+			$query->set('order', 'DESC');
+	}
+	else {
+			$query->set('orderby', 'modified');
+			$query->set('order', 'DESC');
+	}
+}
+
+/**
+ * 指定したコメントIDが属している投稿の
+ * コメント最終更新タイムスタンプフィールドを更新
+ * @param int $comment_id
+ */
+function update_latest_comment_timestamp($comment_id) {
+	$comment = get_comment($comment_id);
+	$post_id = $comment->comment_post_ID;
+	$field_name = 'latest_comment_timestamp';
+	$timestamp = strtotime(wp_date('YmdHis'));
+	update_post_meta($post_id, $field_name, $timestamp);
+}
+/**
+ * コメントが投稿・もしくは修正されたタイミングでカスタムフィールドを更新
+ */
+add_action('comment_post', 'update_latest_comment_timestamp');
+add_action('edit_comment', 'update_latest_comment_timestamp');
+
 
