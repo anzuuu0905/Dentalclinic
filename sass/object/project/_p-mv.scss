@@ -1,4 +1,4 @@
-.p-mv{
+.p-mv {
   // background-image: url("./../img/common/mv1.jpg");
   background-repeat: no-repeat;
   background-position: 50%;
@@ -12,44 +12,53 @@
   // height: calc(100vh - #{rem(200)});
   // height: rem(420);
   margin-bottom: rem(40);
-  @include mq('tab'){
+  @include mq("tab") {
     margin-bottom: rem(70);
   }
 }
 
-.p-mv__slick{
+.p-mv__slick {
   // height: 60vw;
 }
 
-.p-mv__textbox{
+.p-mv__textbox {
   // opacity: 0;
   font-size: rem(24);
-  margin: rem(24);
   display: flex;
   position: absolute;
   top: 10vw;
-  left: 0;
+  left: 50%;
+  transform: translateX(-50%);
   align-items: center;
+  justify-content: center;
+  width: 100%;
+  // margin: rem(8);
   // color:$background;
   // background-color: $background-layer;
-  padding: rem(8);
+  // padding: rem(8);
 }
-.p-mv__text{
-  opacity: 0;
-}
-.p-mv__text.p-mv__text.appeartext{
-  opacity: 1;
-}
-.p-mv__text span{opacity: 0;}
-.p-mv__text.appeartext span
-  {
-    animation:text_anime_on 1s ease-out forwards; 
-    color:$text-color;
-    background-color: $background-layer;
-    padding: rem(8) 0;
-      
+// .p-mv__text.p-mv__text.appeartext {
+//   opacity: 1;
+// }
+.p-mv__text span {
+  display: inline-block;
+  background-color: rgba(255, 255, 255, 0.5);
+  font-size: rem(28);
+  @include mq(tab) {
+    font-size: rem(48);
   }
-@keyframes text_anime_on {
-  0% {opacity:0;}
-  100% {opacity:1;}
 }
+// .p-mv__text.appeartext span {
+//   animation: text_anime_on 1s ease-out forwards;
+//   color: $text-color;
+//   background-color: $background-layer;
+//   padding: rem(8) 0;
+// }
+// @keyframes text_anime_on {
+//   0% {
+//     opacity: 0;
+//   }
+//   100% {
+//     opacity: 1;
+//   }
+// }

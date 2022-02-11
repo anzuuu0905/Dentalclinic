@@ -16,8 +16,8 @@
 
     <div class="p-sub-treatment__list">
       <div class="p-sub-treatment__item p-treatment fadeUpTrigger" id="p-treatment__content1">
-        <div class="p-treatment__inner">
-          <h3 class="p-treatment__title">一般歯科</h3>
+        <div class="p-treatment__inner" id="treatment1">
+          <h3 class="p-treatment__title" >一般歯科</h3>
           <div class="p-treatment__box">
             <figure class="p-treatment__img">
               <img src="<?php echo get_template_directory_uri() ?>/assets/img/common/treatment1.jpg" alt="一般治療の画像"  loading="lazy">
@@ -30,7 +30,7 @@
         </div>
       </div>
       <div class="p-sub-treatment__item p-treatment fadeUpTrigger"  id="p-treatment__content2">
-        <div class="p-treatment__inner">
+        <div class="p-treatment__inner" id="treatment2">
           <h3 class="p-treatment__title">小児歯科</h3>
           <div class="p-treatment__box">
             <figure class="p-treatment__img">
@@ -46,7 +46,8 @@
         </div>
       </div>
       <div class="p-sub-treatment__item p-treatment fadeUpTrigger"  id="p-treatment__content3">
-        <div class="p-treatment__inner">
+        <div class="p-treatment__inner" id="treatment3">
+          <span class="p-treatment__positon"></span>
           <h3 class="p-treatment__title">予防歯科</h3>
           <div class="p-treatment__box">
             <figure class="p-treatment__img">

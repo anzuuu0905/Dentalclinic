@@ -1,43 +1,47 @@
-.p-treatment__inner{
+.p-treatment__inner {
   margin-top: rem(64);
 }
 
-.p-treatment__box{
+.p-treatment__box {
   display: flex;
   flex-direction: column;
-  margin-top:rem(24);
-  @include mq(tab){
+  margin-top: rem(24);
+  @include mq(tab) {
     // flex-wrap: wrap;
     flex-direction: initial;
   }
 }
+.p-treatment__positon {
+  display: block;
+  position: absolute;
+  top: -100px;
+}
 
-.p-treatment__title{
+.p-treatment__title {
   margin-top: rem(24);
-  @include mq(tab){
+  @include mq(tab) {
     margin-top: 0;
   }
 }
 
-.p-treatment__img{
+.p-treatment__img {
   width: rem(320);
   max-width: 100%;
 }
 
-.p-treatment__img img{
+.p-treatment__img img {
   width: inherit;
 }
 
-.p-treatment__body{
+.p-treatment__body {
   max-width: 100%;
   width: 100%;
-  @include mq(tab){
+  @include mq(tab) {
     margin-left: rem(40);
     width: calc(68% - #{$padding-pc * 2});
   }
-
 }
 
-.p-treatment__text{
+.p-treatment__text {
   margin-top: rem(24);
 }

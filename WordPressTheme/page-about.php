@@ -21,7 +21,7 @@
     <section class="p-sub-about__features">
       <h3 class="p-sub-about__subtitle fadeUpTrigger">当院の５つの特徴</h3>
       <div class="p-sub-about__featurebox">
-        <div class="p-sub-about__feature p-sub-feature">
+        <div class="p-sub-about__feature p-sub-feature fadeUpTrigger">
           <figure class="p-sub-feature__img">
             <img src="<?php echo get_template_directory_uri() ?>/assets/img/common/feature1.jpg" alt="feature1" loading="lazy">
           </figure>
