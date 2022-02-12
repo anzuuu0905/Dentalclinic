@@ -28,6 +28,7 @@ gsap.fromTo(
   {
     scale: 1,
     x: 0,
+    delay: 1.5,
     // ease: "bounce.out",
     opacity: 1,
     stagger: 0.2,

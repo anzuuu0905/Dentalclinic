@@ -1,4 +1,4 @@
-.p-sub-contact{
+.p-sub-contact {
   padding-bottom: rem(80);
 }
 
@@ -6,12 +6,12 @@
   font-size: rem(14);
   line-height: 1.7;
   letter-spacing: 0.04em;
-  @include mq(tab){
+  @include mq(tab) {
     font-size: rem(16);
   }
 }
 
-.p-sub-contact__textBox{
+.p-sub-contact__textBox {
   margin-top: rem(48);
 }
 
@@ -34,7 +34,6 @@
   letter-spacing: 0.04em;
   font-weight: 700;
   margin-right: rem(10);
-
 }
 
 .p-sub-contact__required {
@@ -47,14 +46,16 @@
 
 .p-sub-contact__item {
   margin-top: rem(10);
+  display: flex;
+  justify-content: center;
 }
 
-.p-sub-contact__content--bottun{
+.p-sub-contact__content--bottun {
   text-align: center;
 }
 
-.p-sub-contact__content--center{
-  @include mq(tab){
+.p-sub-contact__content--center {
+  @include mq(tab) {
     text-align: center;
   }
 }
